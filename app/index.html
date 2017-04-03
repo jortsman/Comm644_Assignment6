@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mambo Italiano | Online Orders</title>
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" integrity="sha384-aNUYGqSUL9wG/vP7+cWZ5QOM4gsQou3sBfWRr/8S3R1Lv0rysEmnwsRKMbhiQX/O" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/app.css">
+</head>
+
+<body>
+  <header>
+    <div class="jumbotron">
+      <div class="container">
+        <div class="col-md-12">
+          <figure>
+            <img src="../assets/img/mamboitalianologo-white.svg" class="img-responsive" alt="">
+          </figure>
+          <h2>Online Ordering</h2>
+          <a class="btn btn-default" href="#orders" role="button">Get Started</a>
+        </div>
+      </div>
+  </header>
+  <main>
+    <section class="container col-md-7 col-md-offset-1" id="orders">
+      <div class="row">
+        <div class="letterhead">
+          <figure>
+            <img src="../assets/img/mamboitalianologo.svg" class="img-responsive" alt="">
+          </figure>
+          <h3>Fill Out For Food</h3>
+        </div>
+        <div class="form">
+          <div id="deliveryInformation" class="">
+            <h3>Where Are We Sending This?</h3>
+            <hr>
+            <form class="form-horizontal" id="delivery" name="delivery">
+              <div class="form-group">
+                <label for="name" class="col-sm-3 control-label">Name</label>
+                <div class="col-sm-9">
+                  <input type="text" id="name" name="name" class="form-control" placeholder="First Last">
+                  <p class="error hide" id="name_empty" style="color: #ff0000;">Please Enter a Name</p>
+                  <p class="error hide" id="name_invalid" style="color: #ff0000;">Please Enter a Valid Name</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="addressType" class="col-sm-3 control-label">Address Type</label>
+                <div class="col-sm-9">
+                  <select class="form-control" id="addressType">
+                    <option>House</option>
+                    <option>Apartment</option>
+                    <option>Business</option>
+                    <option>Campus</option>
+                    <option>Dorm</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group hide" id="otherOption">
+                <label for="other" class="col-sm-3 control-label">Other</label>
+                <div class="col-sm-9">
+                  <input type="text" id="other" name="otherOption" class="form-control" placeholder="Other">
+                  <p class="error hide" id="other_empty" style="color: #ff0000;">Please Enter an alterate address type.</p>
+                  <p class="error hide" id="other_invalid" style="color: #ff0000;">Please Enter a valid address type.</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="address" class="col-sm-3 control-label">Address</label>
+                <div class="col-sm-6">
+                  <input type="text" id="address" name="address" class="form-control" placeholder="123 Something Street">
+                  <p class="error hide" id="address_empty" style="color: #ff0000;">Please Enter an address.</p>
+                  <p class="error hide" id="address_invalid" style="color: #ff0000;">Please Enter a valid address.</p>
+                </div>
+                <div class="col-sm-3">
+                  <input type="text" id="apt" name="apt" class="form-control" placeholder="Apt / Suite / Unit">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-4 col-sm-offset-3">
+                  <input type="text" id="city" name="city" class="form-control" placeholder="La Jolla">
+                  <p class="error hide" id="city_empty" style="color: #ff0000;">Please enter a city.</p>
+                  <p class="error hide" id="city_invalid" style="color: #ff0000;">Please enter a valid city name.</p>
+                </div>
+                <div class="col-sm-3">
+                  <input type="text" id="state" name="state" class="form-control" placeholder="CA">
+                  <p class="error hide" id="state_empty" style="color: #ff0000;">Please enter a state.</p>
+                  <p class="error hide" id="state_invalid" style="color: #ff0000;">Please enter a valid state abbreviation.</p>
+                </div>
+                <div class="col-sm-2">
+                  <input type="text" id="zipCode" name="zipCode" class="form-control" placeholder="92037">
+                  <p class="error hide" id="zipCode_empty" style="color: #ff0000;">Please enter a zip code.</p>
+                  <p class="error hide" id="zipCode_invalid" style="color: #ff0000;">Please enter a valid 5 or 9 digit zip code.</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="phone" class="col-sm-3 control-label">Phone</label>
+                <div class="col-sm-4">
+                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="123-123-1234">
+                  <p class="error hide" id="phone_empty" style="color: #ff0000;">Please enter a phone number.</p>
+                  <p class="error hide" id="phone_invalid" style="color: #ff0000;">Please enter a valid phone number.</p>
+                </div>
+                <label for="emailAddress" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-3">
+                  <input type="email" id="emailAddress" name="emailAddress" class="form-control" placeholder="you@email.com">
+                  <p class="error hide" id="emailAddress_empty" style="color: #ff0000;">Please enter an email address.</p>
+                  <p class="error hide" id="emailAddress_invalid" style="color: #ff0000;">Please enter a valid email address.</p>
+                </div>
+              </div>
+              <button class="btn btn-primary"  id="deliverySubmitButton">Create Pizza</button>
+            </form>
+          </div>
+          <div id="orderInformation" class="hide">
+            <h3>Create Your Pizza</h3>
+            <hr>
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Choose Crust</label>
+                <div class="col-sm-9 radio" id="dough">
+                  <label>
+                  <input type="radio" name="doughOption" id="handTossed" value="Hand Tossed"> Hand Tossed</label>
+                  <label>
+                  <input type="radio" name="doughOption" id="thinCrust" value="Thin Crust"> Thin Crust</label>
+                  <label>
+                  <input type="radio" name="doughOption" id="newYorkStyle" value="New York Style"> NY Style</label>
+                  <label>
+                  <input type="radio" name="doughOption" id="glutenFree" value="Gluten Free"> Gluten Free</label>
+                  <p class="error hide" id="dough_empty" style="color: #ff0000;">Please pizza size.</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="pizzaSize" class="col-sm-3 control-label">Pizza Size</label>
+                <div class="col-sm-9">
+                  <select class="form-control" id="doughSize" disabled="" placeholder="Hey">
+                    <option value="" selected="selected">Choose Your Crust</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="cheeseOptions" class="col-sm-3 control-label">Cheese Options</label>
+                <div class="col-sm-9">
+                  <select class="form-control" id="cheese">
+                    <option value="Light">Light</option>
+                    <option value="Normal" selected="normal">Normal</option>
+                    <option value="Extra">Extra +$2.99</option>
+                    <option value="Double">Double +$3.99</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="sauceOptions" class="col-sm-3 control-label">Sauce Options</label>
+                <div class="col-sm-9">
+                  <select class="form-control" id="sauce">
+                    <option value="Regular Tomato">Regular Tomato</option>
+                    <option value="Hearty Tomato">Heart Tomato +$.99</option>
+                    <option value="BBQ Sauce">BBQ Sauce +$1.99</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Select Toppings<br>99&#162; each</label>
+                <div class="col-sm-9 checkbox" id="toppings">
+                  <label>
+                  <input type="checkbox" name="optionsRadios" id="" value="Pepperoni"> Pepperoni</label>
+                  <label>
+                  <input type="checkbox" name="optionsRadios" id="" value="Sausage"> Sausage</label>
+                  <label>
+                  <input type="checkbox" name="optionsRadios" id="" value="Ham"> Ham</label>
+                  <label>
+                  <input type="checkbox" name="optionsRadios" id="" value="Bacon"> Bacon</label>
+                  <label>
+                  <input type="checkbox" name="optionsRadios" id="" value="Salami"> Salami</label>
+                  <label>
+                  <input type="checkbox" name="optionsRadios" id="" value="Peppers"> Peppers</label>
+                  <label>
+                  <input type="checkbox" name="optionsRadios" id="" value="Olives"> Olives</label>
+                  <label>
+                  <input type="checkbox" name="optionsRadios" id="" value="Jalapenos"> Jalapenos</label>
+                  <label>
+                  <input type="checkbox" name="optionsRadios" id="" value="Mushrooms"> Mushrooms</label>
+                  <label>
+                  <input type="checkbox" name="optionsRadios" id="" value="Pineapple"> Pineapple</label>
+                  <label>
+                  <input type="checkbox" name="optionsRadios" id="" value="Onion"> Onion</label>
+                </div>
+              </div>
+              <button class="btn btn-primary" id="pizzaSubmitButton">Billing Information</button>
+            </form>
+          </div>
+          <div id="billingInformation" class="hide">
+            <h3>Billing Information</h3>
+            <hr>
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label for="name" class="col-sm-3 control-label">Name</label>
+                <div class="col-sm-9">
+                  <input type="text" id="name" class="form-control" placeholder="First Last">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name" class="col-sm-3 control-label">Address Type</label>
+                <div class="col-sm-9">
+                  <select class="form-control">
+                    <option>House</option>
+                    <option>Apartment</option>
+                    <option>Business</option>
+                    <option>Campus</option>
+                    <option>Dorm</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="other" class="col-sm-3 control-label">Other</label>
+                <div class="col-sm-9">
+                  <input type="text" id="other" class="form-control" placeholder="Other">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="address" class="col-sm-3 control-label">Address</label>
+                <div class="col-sm-6">
+                  <input type="text" id="address" class="form-control" placeholder="123 Something Street">
+                </div>
+                <div class="col-sm-3">
+                  <input type="text" id="apt" class="form-control" placeholder="Apt/Suite/Unit">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-4 col-sm-offset-3">
+                  <input type="text" id="city" class="form-control" placeholder="La Jolla">
+                </div>
+                <div class="col-sm-3">
+                  <input type="text" id="state" class="form-control" placeholder="CA">
+                </div>
+                <div class="col-sm-2">
+                  <input type="text" id="zipcode" class="form-control" placeholder="92037">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="other" class="col-sm-3 control-label">Phone</label>
+                <div class="col-sm-4">
+                  <input type="tel" id="phone" class="form-control" placeholder="123-123-1234">
+                </div>
+                <label for="other" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-3">
+                  <input type="tel" id="phone" class="form-control" placeholder="123-123-1234">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Same as Delivery?</label>
+                <div class="col-sm-9 checkbox">
+                  <label>
+                  <input type="checkbox" name="optionsRadios" id="hand_tossed" value="option1"> Yes, same as delivery.</label>
+                </div>
+              </div>
+              <br>
+              <h3>Credit Card Information</h3>
+              <hr>
+              <div class="form-group">
+                <label for="creditCardNumber" class="col-sm-3 control-label">Credit Card Number</label>
+                <div class="col-sm-9">
+                  <input type="text" id="creditCardNumber" class="form-control" placeholder="Enter Your Credit Card Information Here">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name" class="col-sm-3 control-label">Expiration Month</label>
+                <div class="col-sm-3">
+                  <select class="form-control">
+                    <option>House</option>
+                    <option>Apartment</option>
+                    <option>Business</option>
+                    <option>Campus</option>
+                    <option>Dorm</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <label for="name" class="col-sm-3 control-label">Expiration Year</label>
+                <div class="col-sm-3">
+                  <select class="form-control">
+                    <option>House</option>
+                    <option>Apartment</option>
+                    <option>Business</option>
+                    <option>Campus</option>
+                    <option>Dorm</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="securityCode" class="col-sm-3 control-label">Security Code</label>
+                <div class="col-sm-3">
+                  <input type="text" id="securityCode" class="form-control" placeholder="CVC">
+                </div>
+                <label for="securityCode" class="col-sm-3 control-label">Card Type</label>
+                <div class="col-sm-3">
+                  <input type="text" id="securityCode" class="form-control" value="Amex" disabled="disabled">
+                </div>
+              </div>
+              <br>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Information is Correct</label>
+                <div class="col-sm-9 checkbox">
+                  <label>
+                  <input type="checkbox" name="optionsRadios" id="hand_tossed" value="option1"> I have doublechecked my order details and everything is correct.</label>
+                </div>
+              </div>
+              <button class="btn btn-primary" type="submit" disabled="disabled">Submit My Order</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <aside class="col-md-3 col-md-offset-1">
+      <h3>Your Order:</h3>
+      <hr>
+      <h4>Delivery Information</h4>
+      <p id="nameOutput"></p>
+      <p id="addressTypeOutput"></p>
+      <p id="addressOutput"></p>
+      <p id="aptOutput"></p>
+      <p id="cityOutput"></p>
+      <p id="stateOutput"></p>
+      <p id="zipCodeOutput"></p>
+      <p id="phoneOutput"></p>
+      <p id="emailAddressOutput"></p>
+      <a href="#" role="button" id="editDelivery">Edit Order</a>
+      <hr>
+      <h4>Your Pizza</h4>
+      <h5 id="doughOutput"></h5>
+      <h5 id="doughSizeOutput"></h5>
+      <h5 id="cheeseOutput"></h5>
+      <h5 id="sauceOutput"></h5>
+      <h5 id="toppingsOutput"></h5>
+      <a href="#" role="button" id="editOrder">Edit Order</a>
+      <hr>
+      <h4 id="orderTotal"></h4>
+      <hr>
+      <a class="btn btn-default" href="#" role="button" id="restartOrder">Restart Order</a>
+    </aside>
+  </main>
+  <footer class="col-md-12 footer">
+    <section class="container">
+      <h4>Copyright &copy; 2017 Mambo Italiano LLC. All Rights Reserved.</h4>
+    </section>
+  </footer>
+
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Smmoth Scroll -->
+  <script src="../assets/js/smoothscroll.js" charset="utf-8"></script>
+  <!-- Custom Js -->
+  <script src="../assets/js/selectors.js" charset="utf-8"></script>
+  <script src="../assets/js/validate.js" charset="utf-8"></script>
+  <script src="../assets/js/deliveryform.js" charset="utf-8"></script>
+  <script src="../assets/js/pizzaform.js" charset="utf-8"></script>
+  <script src="../assets/js/sidebar.js" charset="utf-8"></script>
+  <script src="../assets/js/app.js" charset="utf-8"></script>
+</body>
+
+</html>

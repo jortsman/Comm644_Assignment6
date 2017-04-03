@@ -1,0 +1,47 @@
+main
+  height: 100vh
+
+.letterhead
+  img
+    position: absolute
+    display: inline-block
+    left: -55px
+    top: -15px
+    margin: 0px auto 0 auto
+    width: 150px
+    z-index: 1
+
+  h3
+    position: absolute
+    display: inline-block
+    top: 60px
+    left: 67%
+    z-index: 3
+    font-size: 30px
+
+    +mainFont
+
+.form
+  position: relative
+  margin-top: 100px
+  background:
+    color: #fff
+  box-shadow: 0px 20px 30px -20px rgba(167, 149, 117, 0.7), 0px 0px 10px rgba(167, 149, 117, 0.2)
+  padding: 20px
+  z-index: 2
+
+  .btn
+    margin-top: 25px
+
+  .btn-primary
+    background-color: $brand-secondary
+    border: 1px solid darken($brand-secondary, 10%)
+    transition: 0.3s all ease
+
+    &:hover
+      background-color: $brand-primary
+      border: 1px solid $brand-primary
+      color: $white
+
+  h3
+    +mainFontThin
